@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script style="text/javascript">
+        var xhr = new XMLHttpRequest(); // IE8/9需用window.XDomainRequest兼容
+
+        // 前端设置是否带cookie
+        // xhr.withCredentials = true;
+
+        xhr.open('post', 'http://127.0.01:8000/login', true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.send('user=admin');
+
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                alert(xhr.responseText);
+            }
+        };
+    </script>
+</head>
+<body>
+
+</body>
+</html>

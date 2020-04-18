@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+{% for user in userinfos %}
+<img src="{{ user.avatar }}">
+<li>{{ user.nike_name }}</li>
+<li>{{ user.gender }}</li>
+<li>{{ user.province }}</li>
+<li>{{ user.city}}</li>
+{% endfor %}
+<a href="/user/{{ user.id }}">补充信息</a>
+</body>
+</html>
